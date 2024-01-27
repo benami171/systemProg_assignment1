@@ -62,7 +62,7 @@ mains: $(MAIN_OBJECT) $(RECURSION_LIB)
 maindloop: $(MAIN_OBJECT) loopd
 	$(CC) $(LDFLAGS) -o maindloop $(MAIN_OBJECT) -L. -lclassloops
 
-maindrec: $(MAIN_OBJECT) recursived
+maindrec: $(MAIN_OBJECT) $(RECURSION_SHARED_LIB)
 	$(CC) $(LDFLAGS) -o maindrec $(MAIN_OBJECT) -L. -lclassrec
 
 clean:
