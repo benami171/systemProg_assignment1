@@ -1,7 +1,6 @@
 CC = gcc
 AR = ar
 FLAGS = -Wall -g
-LIBS = -lm -fPIC
 HEADER = NumClass.h
 
 MAIN_SOURCE = main.c
@@ -42,12 +41,12 @@ libclassrec.a: $(RECURSION_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
 recursived: libclassrec.so
 
 libclassrec.so: $(RECURSION_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
-	$(CC) -shared -o libclassrec.so $(RECURSION_CLASS_OBJECT) $(BASIC_CLASS_OBJECT) $(LIBS)
+	$(CC) -shared -o libclassrec.so $(RECURSION_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
 
 loopd: libclassloops.so
 
 libclassloops.so: $(LOOP_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
-	$(CC) -shared -o libclassloops.so $(LOOP_CLASS_OBJECT) $(BASIC_CLASS_OBJECT) $(LIBS)
+	$(CC) -shared -o libclassloops.so $(LOOP_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
 
 
 mains: $(MAIN_OBJECT) libclassrec.a
