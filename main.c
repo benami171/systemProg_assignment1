@@ -19,12 +19,7 @@ for (int i = num1; i <= num2; ++i) {
     }
 }
 
-printf("\nThe Prime numbers are:");
-for (int i = num1; i <= num2; ++i) {
-    if (isPrime(i)) {
-        printf(" %d", i);
-    }
-}
+
 
 printf("\nThe Palindrome numbers are:");
 for (int i = num1; i <= num2; ++i) {
@@ -32,6 +27,13 @@ for (int i = num1; i <= num2; ++i) {
         printf(" %d", i);
     }
 }
+    
+printf("\nThe Prime numbers are:");
+for (int i = num1; i <= num2; ++i) {
+    if (isPrime(i)) {
+        printf(" %d", i);
+    }
+}    
 
 printf("\nThe Strong numbers are:");
 for (int i = num1; i <= num2; ++i) {
