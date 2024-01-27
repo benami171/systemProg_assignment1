@@ -5,11 +5,9 @@ int main() {
 int num1, num2;
 
 // Get user input for the two positive numbers
-printf("Enter the first positive number: \n");
 scanf("%d", &num1);
 
 
-printf("Please enter a number greater than the first one: \n");
 scanf("%d", &num2);
 
 
