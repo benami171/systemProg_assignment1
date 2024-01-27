@@ -53,7 +53,7 @@ mains: $(MAIN_OBJECT) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(MAIN_OBJECT) libclassrec.a
 
 maindloop: $(MAIN_OBJECT) 
-	$(CC) $(FLAGS) -o maindloop $(MAIN_OBJECT) ./libclassloop.so
+	$(CC) $(FLAGS) -o maindloop $(MAIN_OBJECT) ./libclassloops.so
 
 maindrec: $(MAIN_OBJECT) 
 	$(CC) $(FLAGS) -o maindrec $(MAIN_OBJECT) ./libclassrec.so
