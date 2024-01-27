@@ -52,7 +52,7 @@ libclassloops.so: $(LOOP_CLASS_OBJECT) $(BASIC_CLASS_OBJECT)
 mains: $(MAIN_OBJECT) libclassrec.a
 	$(CC) $(FLAGS) -o mains $(MAIN_OBJECT) libclassrec.a
 
-maindloop: $(MAIN_OBJECT) loopd
+maindloop: $(MAIN_OBJECT) 
 	$(CC) $(FLAGS) -o maindloop $(MAIN_OBJECT) ./libclassloop.so
 
 maindrec: $(MAIN_OBJECT) 
