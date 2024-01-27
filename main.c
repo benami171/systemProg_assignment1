@@ -21,7 +21,7 @@ for (int i = num1; i <= num2; ++i) {
 
 
 
-printf("\nThe Palindrome numbers are:");
+printf("\nThe Palindromes are:");
 for (int i = num1; i <= num2; ++i) {
     if (isPalindrome(i)) {
         printf(" %d", i);
