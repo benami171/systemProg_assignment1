@@ -27,10 +27,10 @@ MAIN_DYNAMIC_RECURSION = maindrec
 all: loops recursives recursived loopd mains maindloop maindrec
 
 
-loops: $(LOOP_LIB)
+loops: libclassloops.a
 
-$(LOOP_LIB): $(BASIC_CLASS_OBJECT) $(LOOP_CLASS_OBJECT)
-	$(AR) -rcs $(LOOP_LIB) $(BASIC_CLASS_OBJECT) $(LOOP_CLASS_OBJECT)
+libclassloops.a: $(BASIC_CLASS_OBJECT) $(LOOP_CLASS_OBJECT)
+	$(AR) -rcs libclassloops.a $(BASIC_CLASS_OBJECT) $(LOOP_CLASS_OBJECT)
 
 
 recursives: libclassrec.a
