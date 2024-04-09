@@ -29,18 +29,19 @@ int isArmstrong(int n){
     int currFig = n;
 
     while (currFig > 0){
-     currFig = currFig/10;
-     counter++;
+        currFig = currFig/10;
+        counter++;
     }
-    int ans = isArmstrongHelper(n,counter);
+    int ans = isArmstrongHelper(n, counter);
     if (ans != n) return FALSE;
     return TRUE;
 }
 
 int isArmstrongHelper(int n, int numOfDigits){
-    if (n == 0) {return n;
+    if (n == 0) {
+        return n;
     } 
-    return (isArmstrongHelper(n/10,numOfDigits) + power(n%10,numOfDigits));
+    return (power(n % 10, numOfDigits) + isArmstrongHelper(n / 10, numOfDigits));
 }
 
 
